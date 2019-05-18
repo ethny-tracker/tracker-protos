@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-package ethny.tracker;
-
 message Tracker {
   string title = 1;
   string description = 2;
