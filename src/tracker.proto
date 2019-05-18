@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-message Tracker {
+// The metadata about a file.
+message FileMetadata {
   string title = 1;
   string description = 2;
-
   string category = 3;
+  string uri = 4;
 }
