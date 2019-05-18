@@ -2,9 +2,6 @@
   "name": "@ethny-tracker/tracker-protos",
   "version": "1.0.0",
   "description": "protos for the ethny tracker",
-  "files": [
-    "dist/"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ethny-tracker/tracker-protos.git"
@@ -21,6 +18,9 @@
   "devDependencies": {
     "rimraf": "^2.6.3"
   },
+  "files": [
+    "build/"
+  ],
   "main": "build/bundle.js",
   "types": "build/bundle.d.ts",
   "scripts": {
