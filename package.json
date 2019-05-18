@@ -1,0 +1,36 @@
+{
+  "name": "@ethny-tracker/tracker-protos",
+  "version": "1.0.0",
+  "description": "protos for the ethny tracker",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethny-tracker/tracker-protos.git"
+  },
+  "author": "Moody Salem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethny-tracker/tracker-protos/issues"
+  },
+  "homepage": "https://github.com/ethny-tracker/tracker-protos#readme",
+  "dependencies": {
+    "protobufjs": "^6.8.8"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
+  },
+  "main": "build/bundle.js",
+  "types": "build/bundle.d.ts",
+  "scripts": {
+    "clean": "rimraf build",
+    "generate:protosjs": "pbjs -t static-module --force-long -o build/bundle.js -w commonjs src/*.proto",
+    "generate:protosts": "pbts -o build/bundle.d.ts build/bundle.js",
+    "generate:protos": "mkdir -p build/ && npm run generate:protosjs && npm run generate:protosts",
+    "generate": "npm run generate:protos",
+    "prebuild": "npm run clean",
+    "build": "npm run generate",
+    "prepare": "npm run build"
+  }
+}
