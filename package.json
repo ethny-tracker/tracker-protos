@@ -1,6 +1,6 @@
 {
   "name": "@ethny-tracker/tracker-protos",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "protos for the ethny tracker",
   "repository": {
     "type": "git",
